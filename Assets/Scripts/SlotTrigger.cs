@@ -7,15 +7,19 @@ public class SlotTrigger : MonoBehaviour
     public GameObject slotMachineObject;
     SlotMachine slotMachine;
     bool playerFacing = false;
+    PlayerController playerController;
     void Start()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         slotMachine = slotMachineObject.GetComponent<SlotMachine>();
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Spin")){
-            slotMachine.Spin();            
+        if(Input.GetButtonDown("Spin") && playerFacing && playerController.CanPlay()){
+            Debug.Log("test");
+            playerController.lastPlay = Time.time;
+            slotMachine.StartSpin();            
         }
     }
 

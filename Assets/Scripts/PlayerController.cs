@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float playDelay;
+    public float lastPlay;
     Rigidbody2D _rb;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    public bool CanPlay(){
+        return lastPlay + playDelay < Time.time;
     }
 
     void Update()

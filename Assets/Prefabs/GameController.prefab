@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1926312134920992752}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,4 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f239496d2784cd4bf1a45db6d3058a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cash: 0
+  startHour: 6
   cashText: {fileID: 0}
+  timeText: {fileID: 0}
+  secondLength: 0.1
+  isPaused: 0
+  pauseMenu: {fileID: 0}
